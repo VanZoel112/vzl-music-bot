@@ -19,7 +19,7 @@ from datetime import datetime
 # Telegram libraries
 from pyrogram import Client, filters, types
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram.errors import ChatAdminRequiredError, UserNotParticipantError
+from pyrogram.errors import ChatAdminRequired, UserNotParticipant
 
 # PyTgCalls for voice streaming
 from pytgcalls import PyTgCalls
