@@ -23,7 +23,7 @@ from pyrogram.errors import ChatAdminRequiredError, UserNotParticipantError
 
 # PyTgCalls for voice streaming
 from pytgcalls import PyTgCalls
-from pytgcalls.types import MediaStream
+from pytgcalls.types import AudioPiped
 from pytgcalls.exceptions import GroupCallNotFound
 
 # Audio/Video processing
@@ -134,11 +134,8 @@ class MusicBot:
     async def play_music(self, chat_id: int, track_info: dict):
         """Play music in voice chat"""
         try:
-            # Create MediaStream for audio-only playback
-            stream = MediaStream(
-                track_info['url'],
-                video_flags=MediaStream.Flags.IGNORE
-            )
+            # Create AudioPiped for audio-only playback
+            stream = AudioPiped(track_info['url'])
 
             # Play in voice chat
             await pytgcalls.play(chat_id, stream)
