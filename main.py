@@ -50,12 +50,6 @@ if _audio_piped is None:
 
 AudioPiped = _audio_piped
     
-    except ImportError:
-    try:  # PyTgCalls 3.x
-        from pytgcalls.types import AudioPiped
-    except ImportError:  # PyTgCalls <= 2.x
-from pytgcalls.exceptions import GroupCallNotFound
-
 # Audio/Video processing
 import yt_dlp
 from mutagen import File as MutagenFile
