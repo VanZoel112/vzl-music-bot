@@ -33,7 +33,6 @@ except ImportError:
     try:  # PyTgCalls 3.x
         from pytgcalls.types import AudioPiped
     except ImportError:  # PyTgCalls <= 2.x
-        from pytgcalls.types.input_stream import AudioPiped
 from pytgcalls.exceptions import GroupCallNotFound
 
 # Audio/Video processing
