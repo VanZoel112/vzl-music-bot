@@ -23,7 +23,7 @@ from pyrogram.errors import ChatAdminRequired, UserNotParticipant
 
 # PyTgCalls for voice streaming
 from pytgcalls import PyTgCalls
-from pytgcalls.types import AudioPiped
+from pytgcalls.types.input_stream import AudioPiped
 from pytgcalls.exceptions import GroupCallNotFound
 
 # Audio/Video processing
