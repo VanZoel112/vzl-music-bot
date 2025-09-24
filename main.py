@@ -11,6 +11,7 @@ import asyncio
 import os
 import re
 import logging
+import importlib
 from typing import Dict, List, Optional
 import json
 import sqlite3
@@ -27,8 +28,28 @@ from pytgcalls import PyTgCalls
 # PyTgCalls keeps moving AudioPiped between releases. Try the newest import
 # path first (v4.x), then fall back to the legacy locations so the bot keeps
 # working regardless of the installed version.
-try:  # PyTgCalls >= 4.0
-    from pytgcalls.types.stream import AudioPiped
+# Resolve AudioPiped import location across PyTgCalls releases.
+_audio_piped = None
+for _module_path, _attr in (
+    ("pytgcalls.types.stream", "AudioPiped"),  # PyTgCalls >= 4.0
+    ("pytgcalls.types", "AudioPiped"),          # PyTgCalls 3.x
+    ("pytgcalls.types.input_stream", "AudioPiped"),  # PyTgCalls <= 2.x
+):
+    try:
+        _module = importlib.import_module(_module_path)
+        _audio_piped = getattr(_module, _attr)
+        break
+    except (ImportError, AttributeError):
+        continue
+
+if _audio_piped is None:
+    raise ImportError(
+        "Unable to import AudioPiped from pytgcalls. Please ensure a compatible "
+        "version of PyTgCalls is installed."
+    )
+
+AudioPiped = _audio_piped
+    
 except ImportError:
     try:  # PyTgCalls 3.x
         from pytgcalls.types import AudioPiped
