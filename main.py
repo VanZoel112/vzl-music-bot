@@ -24,13 +24,16 @@ from pyrogram.errors import ChatAdminRequired, UserNotParticipant
 # PyTgCalls for voice streaming
 from pytgcalls import PyTgCalls
 
-# PyTgCalls has changed the location of AudioPiped between versions.
-# Support both the legacy (types.input_stream) and newer (types) paths so the
-# bot can run regardless of the installed py-tgcalls release.
-try:  # PyTgCalls >= 3.0
-    from pytgcalls.types import AudioPiped
-except ImportError:  # PyTgCalls < 3.0
-    from pytgcalls.types.input_stream import AudioPiped
+# PyTgCalls keeps moving AudioPiped between releases. Try the newest import
+# path first (v4.x), then fall back to the legacy locations so the bot keeps
+# working regardless of the installed version.
+try:  # PyTgCalls >= 4.0
+    from pytgcalls.types.stream import AudioPiped
+except ImportError:
+    try:  # PyTgCalls 3.x
+        from pytgcalls.types import AudioPiped
+    except ImportError:  # PyTgCalls <= 2.x
+        from pytgcalls.types.input_stream import AudioPiped
 from pytgcalls.exceptions import GroupCallNotFound
 
 # Audio/Video processing
