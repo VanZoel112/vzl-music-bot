@@ -1,9 +1,9 @@
-# 🎵 VZL Music Bot
+# 🎵 Vzoel Music Bot
 
 **Realistic Telegram Music Bot dengan PyTgCalls Integration**
 
-Created by: **VanZoel112**
-Enhanced by: **Vzoel Fox's Ltpn**
+Founder: **Vzoel Fox's Lutpan**
+ID Founder: **@VZLfxs**
 
 ---
 
@@ -206,6 +206,6 @@ This project is created for educational and personal use.
 ---
 
 **Support & Updates**
-- Repository: [VZL Music Bot](https://github.com/VanZoel112/vzl-music-bot)
-- Creator: VanZoel112
-- Enhanced by: Vzoel Fox's Ltpn
+- Repository: [Vzoel Music Bot](https://github.com/VanZoel112/vzl-music-bot)
+- Founder: Vzoel Fox's Lutpan
+- ID Founder: @VZLfxs

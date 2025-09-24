@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-VZL Music Bot - Realistic Telegram Music Bot Implementation
-Created for: VanZoel112
+Vzoel Music Bot - Realistic Telegram Music Bot Implementation
+Founder: Vzoel Fox's Lutpan
+ID Founder: @VZLfxs
 Features: YouTube, Spotify, SoundCloud streaming dengan PyTgCalls
 NO PREMIUM EMOJIS - Using standard emojis only (realistic approach)
 """
@@ -184,7 +185,7 @@ music_bot = MusicBot()
 @app.on_message(filters.command(["start", "help"]))
 async def start_command(client, message: Message):
     """Start command with bot info"""
-    start_text = f"""🎵 **VZL Music Bot**
+    start_text = f"""🎵 **Vzoel Music Bot**
 
 🎧 **Fitur:**
 🔸 YouTube streaming
@@ -202,7 +203,8 @@ async def start_command(client, message: Message):
 /resume - Resume playback
 /current - Now playing info
 
-👨‍💻 **Created by:** VanZoel112
+👨‍💻 **Founder:** Vzoel Fox's Lutpan
+🆔 **ID Founder:** @VZLfxs
 ⚡ **Powered by:** PyTgCalls v2.2+"""
 
     keyboard = InlineKeyboardMarkup([
