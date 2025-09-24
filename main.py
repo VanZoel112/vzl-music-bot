@@ -35,7 +35,7 @@ CONFIG = {
     "BOT_TOKEN": "8314911312:AAEZTrlru95_QNycAt4TlYH_k-7q2f_PQ9c",
     "API_ID": 26576546,
     "API_HASH": "d1948cd4d196a991366f762189c4ff3d",
-    "SUDO_USERS": [8024282347], [7768763441]  # Admin user IDs
+    "SUDO_USERS": [8024282347, 7768763441],  # Admin user IDs
     "LOG_GROUP_ID": -1003098574590,  # Optional: Log group
     "DATABASE_PATH": "vzl_music.db"
 }
