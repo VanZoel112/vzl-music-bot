@@ -1,0 +1,6 @@
+pyrogram==2.2.0
+pytgcalls==3.0.0.dev12
+yt-dlp>=2024.1.0
+mutagen>=1.47.0
+asyncio
+sqlite3
