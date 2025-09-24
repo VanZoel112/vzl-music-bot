@@ -23,7 +23,6 @@ from pyrogram.errors import ChatAdminRequired, UserNotParticipant
 
 # PyTgCalls for voice streaming
 from pytgcalls import PyTgCalls
-from pytgcalls.types.input_stream import AudioPiped
 
 # PyTgCalls has changed the location of AudioPiped between versions.
 # Support both the legacy (types.input_stream) and newer (types) paths so the
