@@ -32,11 +32,11 @@ from mutagen import File as MutagenFile
 
 # Configuration
 CONFIG = {
-    "BOT_TOKEN": "YOUR_BOT_TOKEN_HERE",
-    "API_ID": 12345678,
-    "API_HASH": "your_api_hash_here",
-    "SUDO_USERS": [123456789],  # Admin user IDs
-    "LOG_GROUP_ID": -1001234567890,  # Optional: Log group
+    "BOT_TOKEN": "8314911312:AAEZTrlru95_QNycAt4TlYH_k-7q2f_PQ9c",
+    "API_ID": 26576546,
+    "API_HASH": "d1948cd4d196a991366f762189c4ff3d",
+    "SUDO_USERS": [8024282347], [7768763441]  # Admin user IDs
+    "LOG_GROUP_ID": -1003098574590,  # Optional: Log group
     "DATABASE_PATH": "vzl_music.db"
 }
 
